@@ -1,0 +1,23 @@
+name: PigmanTest
+version: '${project.version}'
+main: fr.skytryx.pigmantest.PigmanTest
+api-version: '1.20'
+commands:
+  createinstance:
+    description: Command to create instances
+    usage: "§3Usage: /createinstance <name>"
+    aliases: [cinstance, createi]
+    permission: pigmantest.command.createinstance
+  deleteinstance:
+    description: Command to delete instances
+    usage: "§3Usage: /deleteinstance <name>"
+    aliases: [dinstance, deletei]
+    permission: pigmantest.command.deleteinstance
+  listinstance:
+    description: Command to get a list of all instances
+    usage: "§3Usage: /listinstance"
+    aliases: [listi, linstance]
+  tpinstance:
+    description: Command to teleport to an instance
+    usage: "§3Usage: /tpinstance <name>"
+    aliases: [tpi, teleporti, teleportinstance]
