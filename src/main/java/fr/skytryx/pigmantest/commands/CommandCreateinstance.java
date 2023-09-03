@@ -8,7 +8,12 @@ import org.bukkit.WorldCreator;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Objects;
 
 public class CommandCreateinstance implements CommandExecutor {
     @Override
@@ -23,6 +28,14 @@ public class CommandCreateinstance implements CommandExecutor {
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, Boolean.FALSE);
                 world.setGameRule(GameRule.DO_WEATHER_CYCLE, Boolean.FALSE);
                 world.save();
+                final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PigmanTest")).getDataFolder(), "instances.yml");
+                final YamlConfiguration instanceconfig = YamlConfiguration.loadConfiguration(instancefile);
+                instanceconfig.set(strings[0], strings[0]);
+                try {
+                    instanceconfig.save(instancefile);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 commandSender.sendMessage("§c[Instance] §bL'Instance §6"+ strings[0] +" §ba été créé!");
             } else return false;
         } else return false;
