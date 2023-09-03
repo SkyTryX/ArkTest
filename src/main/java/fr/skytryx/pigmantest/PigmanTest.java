@@ -19,11 +19,11 @@ public final class PigmanTest extends JavaPlugin {
         Objects.requireNonNull(getCommand("listinstance")).setExecutor(new CommandListinstance());
         Objects.requireNonNull(getCommand("tpinstance")).setExecutor(new CommandTpinstance());
         getServer().getPluginManager().registerEvents(new LobbyProtection(), this);
-        Bukkit.getLogger().info("Le plugin a été activé");
+        Bukkit.getLogger().info("[PigmanTest] Le plugin a été activé");
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getLogger().info("Le plugin a été desactivé");
+        Bukkit.getLogger().info("[PigmanTest] Le plugin a été desactivé");
     }
 }
