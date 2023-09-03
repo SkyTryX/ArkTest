@@ -20,9 +20,9 @@ public class CommandDeleteinstance implements CommandExecutor {
                 Objects.requireNonNull(Bukkit.getWorld(strings[0])).getPlayers().forEach(Player::kick);
                 try {
                     FileUtils.deleteDirectory(new File(strings[0]));
-                    commandSender.sendMessage("§c[Instance] §bDeleted the §6"+ strings[0] +" §b instance!");
+                    commandSender.sendMessage("§c[Instance] §bVous avez supprimé l'instnace §6"+ strings[0]);
                 } catch (IOException e) {
-                    System.out.println("[Instance] World Folder not existing");
+                    Bukkit.getLogger().warning("[Instance] Le fichier du monde n'éxiste pas");
                 }
             }
         } else return false;

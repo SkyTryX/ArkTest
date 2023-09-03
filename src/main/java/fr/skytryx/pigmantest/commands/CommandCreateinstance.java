@@ -23,7 +23,7 @@ public class CommandCreateinstance implements CommandExecutor {
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, Boolean.FALSE);
                 world.setGameRule(GameRule.DO_WEATHER_CYCLE, Boolean.FALSE);
                 world.save();
-                commandSender.sendMessage("§c[Instance] §bInstance §6"+ strings[0] +" §bhas been created!");
+                commandSender.sendMessage("§c[Instance] §bL'Instance §6"+ strings[0] +" §ba été créé!");
             } else return false;
         } else return false;
         return true;

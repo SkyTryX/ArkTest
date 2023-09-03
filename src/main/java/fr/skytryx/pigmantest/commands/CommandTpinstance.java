@@ -15,7 +15,7 @@ public class CommandTpinstance implements CommandExecutor {
         if(strings.length == 1){
             if(Bukkit.getWorld(strings[0]) != null){
                 ((Player) commandSender).teleport(new Location(Bukkit.getWorld(strings[0]), 0, 64, 0));
-                commandSender.sendMessage("§c[Instance] §bYou have been teleported to the §6"+strings[0]+" §binstance!");
+                commandSender.sendMessage("§c[Instance] §b Tu as été téléporté à l'instance §6"+strings[0]);
                 return true;
             }
         }

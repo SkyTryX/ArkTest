@@ -9,9 +9,9 @@ import org.jetbrains.annotations.NotNull;
 public class CommandListinstance implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
-        commandSender.sendMessage("§b--------INSTANCELIST--------");
+        commandSender.sendMessage("§b--------§fLISTE INSTANCE§b--------");
         Bukkit.getWorlds().forEach(w -> commandSender.sendMessage("§6"+w.getName()));
-        commandSender.sendMessage("§b----------------------------");
+        commandSender.sendMessage("§b------------------------------");
         return true;
     }
 }
