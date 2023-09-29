@@ -21,3 +21,8 @@ commands:
     description: Command to teleport to an instance
     usage: "§3Usage: /tpinstance <name>"
     aliases: [tpi, teleporti, teleportinstance]
+  download:
+    description: Command to download the map you're in
+    usage: "§3Usage: /download"
+    aliases: [instancedownload, downloadinstance]
+    permission: pigmantest.command.download
