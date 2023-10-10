@@ -24,7 +24,7 @@ public final class PigmanTest extends JavaPlugin {
 
         final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PigmanTest")).getDataFolder(), "skills.yml");
         final YamlConfiguration instanceconfig = YamlConfiguration.loadConfiguration(instancefile);
-        Objects.requireNonNull(instanceconfig.getConfigurationSection("")).getValues(false).forEach((path, pl) -> Bukkit.createWorld(new WorldCreator(path)));
+        Objects.requireNonNull(instanceconfig.getConfigurationSection("")).getValues(false).forEach((path, pl) -> Objects.requireNonNull(Bukkit.createWorld(new WorldCreator(path))).save());
         Bukkit.getLogger().info("[PigmanTest] Le plugin a été activé");
     }
 
