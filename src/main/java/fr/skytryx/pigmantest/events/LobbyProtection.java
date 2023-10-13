@@ -1,5 +1,7 @@
 package fr.skytryx.pigmantest.events;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -26,6 +28,7 @@ public class LobbyProtection implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event){
+        event.getPlayer().teleport(new Location(Bukkit.getWorld("world"), 0, 64, 0));
         event.getPlayer().sendMessage("§bBienvenue dans le serveur de §6Test\n" +
                 "§bC'est ici que sont testés les §6plugins §bet\n" +
                 "§bque les maps sont §6construites!");
