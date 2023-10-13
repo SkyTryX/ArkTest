@@ -22,7 +22,7 @@ public class CommandDeleteinstance implements CommandExecutor {
                 try {
                     Bukkit.unloadWorld(strings[0], false);
                     FileUtils.deleteDirectory(new File(strings[0]));
-                    final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PigmanTest")).getDataFolder(), "skills.yml");
+                    final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PigmanTest")).getDataFolder(), "instances.yml");
                     final YamlConfiguration instanceconfig = YamlConfiguration.loadConfiguration(instancefile);
                     instanceconfig.set(strings[0], null);
                     commandSender.sendMessage("§c[Instance] §bVous avez supprimé l'instance §6"+ strings[0]);
