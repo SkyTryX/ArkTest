@@ -1,4 +1,4 @@
-package fr.skytryx.pigmantest;
+package fr.skytryx.arktest;
 
 import org.bukkit.World;
 import org.bukkit.generator.ChunkGenerator;

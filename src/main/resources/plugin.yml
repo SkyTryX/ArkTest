@@ -1,18 +1,18 @@
-name: PigmanTest
+name: ArkTest
 version: '${project.version}'
-main: fr.skytryx.pigmantest.PigmanTest
+main: fr.skytryx.arktest.ArkTest
 api-version: '1.20'
 commands:
   createinstance:
     description: Command to create instances
     usage: "§3Usage: /createinstance <name>"
     aliases: [cinstance, createi]
-    permission: pigmantest.command.createinstance
+    permission: arktest.command.createinstance
   deleteinstance:
     description: Command to delete instances
     usage: "§3Usage: /deleteinstance <name>"
     aliases: [dinstance, deletei]
-    permission: pigmantest.command.deleteinstance
+    permission: arktest.command.deleteinstance
   listinstance:
     description: Command to get a list of all instances
     usage: "§3Usage: /listinstance"
@@ -25,4 +25,4 @@ commands:
     description: Command to download the map you're in
     usage: "§3Usage: /download"
     aliases: [instancedownload, downloadinstance]
-    permission: pigmantest.command.download
+    permission: arktest.command.download

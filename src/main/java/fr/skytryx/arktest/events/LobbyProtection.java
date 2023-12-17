@@ -1,4 +1,4 @@
-package fr.skytryx.pigmantest.events;
+package fr.skytryx.arktest.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

@@ -1,6 +1,6 @@
-package fr.skytryx.pigmantest.commands;
+package fr.skytryx.arktest.commands;
 
-import fr.skytryx.pigmantest.EmptyChunkGenerator;
+import fr.skytryx.arktest.EmptyChunkGenerator;
 import org.bukkit.Bukkit;
 import org.bukkit.GameRule;
 import org.bukkit.World;
@@ -28,7 +28,7 @@ public class CommandCreateinstance implements CommandExecutor {
                 world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, Boolean.FALSE);
                 world.setGameRule(GameRule.DO_WEATHER_CYCLE, Boolean.FALSE);
                 world.save();
-                final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PigmanTest")).getDataFolder(), "instances.yml");
+                final File instancefile = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("ArkTest")).getDataFolder(), "instances.yml");
                 final YamlConfiguration instanceconfig = YamlConfiguration.loadConfiguration(instancefile);
                 instanceconfig.set(strings[0], strings[0]);
                 try {
